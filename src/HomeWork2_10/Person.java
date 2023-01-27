@@ -27,7 +27,7 @@ public class Person {
         this.age = age;
     }
 
-@Override
+    @Override
     public String toString() {
         return "Приввет! Меня зовут " +
                 name +

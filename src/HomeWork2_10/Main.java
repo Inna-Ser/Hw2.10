@@ -87,12 +87,34 @@ public class Main {
         System.out.println(randomNumber1.get());
 
 //  task 5
+        Integer numb = 4;
 
-        Predicate<Person> predicate2 = person -> {
-            String ternaryOperator = String.valueOf((person2.getAge() == 11) ? ("Ivan") : ("Others"));
-            return true;
+        Predicate<Integer> task5Predicate = integer -> {
+            if (numb >= 0) {
+                return true;
+            }
+            return false;
         };
-        System.out.println(predicate2.test(person1));
+        Function<Integer, Integer> ifTrue = new Function<Integer, Integer>() {
+            @Override
+            public Integer apply(Integer numb) {
+                numb = numb * 10;
+                return numb;
+            }
+        };
+
+
+        Function<Integer, Integer> ifFalse = new Function<Integer, Integer>() {
+            @Override
+            public Integer apply(Integer numb) {
+                numb = numb * -10;
+                return numb;
+            }
+        };
+
+        System.out.println(Task5.ternaryOperator(task5Predicate, ifTrue, ifFalse));
     }
 }
+
+
 
