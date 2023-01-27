@@ -93,7 +93,6 @@ public class Main {
             return true;
         };
         System.out.println(predicate2.test(person1));
-
     }
 }
 
