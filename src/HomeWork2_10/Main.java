@@ -87,10 +87,11 @@ public class Main {
         System.out.println(randomNumber1.get());
 
 //  task 5
-        Integer numb = 4;
+
+        Integer numb = -6;
 
         Predicate<Integer> task5Predicate = integer -> {
-            if (numb >= 0) {
+            if (integer >= 0) {
                 return true;
             }
             return false;
@@ -112,7 +113,7 @@ public class Main {
             }
         };
 
-        System.out.println(Task5.ternaryOperator(task5Predicate, ifTrue, ifFalse));
+        System.out.println(Task5.ternaryOperator(task5Predicate, ifTrue, ifFalse).apply(numb));
     }
 }
 
